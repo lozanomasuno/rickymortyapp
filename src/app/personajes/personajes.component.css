@@ -12,7 +12,6 @@ section .targetaPersonaje {
   border-radius: 10px;
   transition: border 2s;
   width: auto;
-  text-decoration: none;
   padding: 2px;
   margin: 2px;
   display: flex;
@@ -86,8 +85,11 @@ section .container {
   }
   section .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     margin: 0 auto;
+  }
+  .search-input {
+    margin: 10px;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {

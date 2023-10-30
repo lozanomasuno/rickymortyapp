@@ -1,17 +1,13 @@
 <section>
   <div>
     <div class="search-box">
-        <input type="text" [(ngModel)]="keyword" class="search-input" placeholder="Buscar.."  >    
+      <input type="text" [(ngModel)]="keyword" class="search-input" placeholder="Buscar.."  >    
     </div>
+  </div>
+  <div class="container">
+    <div class="targetaPersonaje"  *ngFor="let data of alldata | search: keyword" > 
+      <img [src]="data.image" alt="data.name">
+      <p>{{data.name}}</p>
     </div>
-    <div class="container">
-        <div class="targetaPersonaje"  *ngFor="let data of alldata | search: keyword" > 
-          <img [src]="data.image" alt="data.name">
-          <p>{{data.name}}</p>
-          <!-- <p><strong>{{data.status}}</strong></p> -->
-      </div>   
-    </div>
- 
-     
-    
-  </section>
+  </div>
+</section>

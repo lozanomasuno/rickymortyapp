@@ -14,9 +14,9 @@ export class SearchbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  /*Deprecated*/
-  search(){
-    this.apiPersonajesService.getApiPersonajes(this.keyword).subscribe((data: any) =>{
+ 
+ public search(){
+    this.apiPersonajesService.getApiPersonajes(this.keyword).subscribe((data: any) => {
      this.keyword = data.results;
       console.log(this.urlImage);
     });

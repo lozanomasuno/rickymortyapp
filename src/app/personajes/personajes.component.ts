@@ -13,13 +13,14 @@ export class PersonajesComponent implements OnInit {
   constructor(private apiPersonajesService : ApiPersonajesService ) { }
 
   ngOnInit(): void {
-    this.loadAllNews();
+    this.cargarPersonajes();
   }
 
-  loadAllNews(){   
+  public cargarPersonajes(){   
       this.apiPersonajesService. getTotalResults().subscribe((data: any) =>{   
-          console.log(data.results);       
+          console.log(data.results.status);       
         return this.alldata = data.results;        
       });  
   }
+
  }
