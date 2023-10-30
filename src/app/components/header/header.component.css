@@ -1,0 +1,25 @@
+.container {
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  text-transform: uppercase;
+  color: #002e00;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10% 2% 0.5% 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container label {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 1.2em;
+}
+.container p {
+  font-size: 3em;
+}
+.container img {
+  width: 25%;
+}/*# sourceMappingURL=header.component.css.map */

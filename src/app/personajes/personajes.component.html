@@ -1,0 +1,17 @@
+<section>
+  <div>
+   <div class="search-box">
+      <input type="text" [(ngModel)]="keyword" class="search-input" placeholder="Buscar.."  >    
+   </div>
+  </div>
+  <a class="container" href="">
+      <div class="targetaPersonaje"  *ngFor="let data of alldata | search: keyword" > 
+        <img [src]="data.image" alt="">
+        <p>{{data.name}}</p>
+        <!-- <p><strong>{{data.status}}</strong></p> -->
+    </div>   
+  </a>
+ 
+     
+    
+  </section>
