@@ -4,68 +4,62 @@ h1{
 
 section {
     max-width: 1024px;
-    margin: 0 auto;  
+    margin: 0 auto;     
 
     .targetaPersonaje {
       position: relative;
-      cursor: pointer;
-      border: 2px solid white;
+      cursor: pointer;      
       border-radius: 10px;
-      padding-top: 1%;
-      margin: 1% 2%;
       transition: border 2s;
       width: auto;
       text-decoration: none;
-      &:hover{
-        border: 2px solid gray;
-        text-decoration: none;
+      padding: 2px;
+      margin: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover{       
+        text-decoration: none;       
       }
 
       img{
+        border: 2px solid white;
         transition: filter .5s;
+        border-radius: 10px;
+        width: auto;
+        display:inline-block;
         &:hover{
           filter: grayscale(1);
+          border: 2px solid gray;
+
+          -webkit-transition: width 0.2s ease-in-out;
+          -moz-transition: width 0.2s ease-in-out;
+          -o-transition: width 0.2s ease-in-out;
+          transition: width 0.2s ease-in-out;      
+          width:110%;
         }
       }
       p{
+        position: absolute;
+        bottom: 5%;
         margin: 5%;         
         font-size: 1.2em;   
         font-weight: 600;
-        &:nth-child(2n){          
-          font-weight: 600;
-          top: 85%;
-          left: 5%;
-        }
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        background: rgba(0,0,0,0.5);
       }
     }
+   
     .container{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       padding: 40px;
+      scroll-behavior: auto;
+      border-radius: 45px;
     }
-    div{
-      margin: 1%;
-    }
-    img{
-      width: 100%;
-    }
-    label{
-      font-weight: 700;
-      line-height: 1em;
-      margin: 2% 0;
-      text-transform: uppercase;
-    }
-    p{
-      margin: 0.1%;
-      color: gray;
-      &:nth-child(2n){
-        color: rgb(15, 15, 15) !important;
-      }
-      a{
-        color: #e60023;
-      }
-    }
-  }
+}
   
   
   .search-box{
@@ -78,7 +72,6 @@ section {
     width: 100%;
     padding: 10px;
     border: 1px solid #e0e0e0;
-    border-right: none;
     outline: none;
     font-size: 20px;
     background: none;
